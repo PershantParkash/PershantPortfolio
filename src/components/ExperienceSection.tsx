@@ -3,15 +3,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 export default function ExperienceSection() {
-  const [mounted, setMounted] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
-  const [activeExperience, setActiveExperience] = useState(0);
-  const [viewMode, setViewMode] = useState('timeline'); // 'timeline' or 'cards'
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    setMounted(true);
     
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 1024);
@@ -429,7 +425,6 @@ export default function ExperienceSection() {
                     target.style.borderColor = experience.color;
                     target.style.transform = 'scale(1.02)';
                     target.style.boxShadow = `0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px ${experience.color}40`;
-                    setActiveExperience(index);
                   }}
                   onMouseLeave={(e) => {
                     const target = e.currentTarget as HTMLDivElement;

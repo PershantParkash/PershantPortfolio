@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 export default function ContactSection() {
-  const [mounted, setMounted] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
@@ -11,15 +10,14 @@ export default function ContactSection() {
     email: '',
     subject: '',
     message: '',
-    budget: '',
+    projectType: '',
     timeline: ''
   });
-  const [formStatus, setFormStatus] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    setMounted(true);
     
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 1024);
@@ -38,14 +36,15 @@ export default function ContactSection() {
       { threshold: 0.1 }
     );
     
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
     
     return () => {
       window.removeEventListener('resize', handleResize);
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -61,18 +60,18 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setFormStatus('');
+    setSubmitStatus('idle');
     
     // Simulate form submission
     setTimeout(() => {
-      setFormStatus('success');
+      setSubmitStatus('success');
       setIsSubmitting(false);
       setFormData({
         name: '',
         email: '',
         subject: '',
         message: '',
-        budget: '',
+        projectType: '',
         timeline: ''
       });
     }, 2000);
@@ -159,15 +158,6 @@ export default function ContactSection() {
     "Performance Optimization",
     "Consulting",
     "Other"
-  ];
-
-  const budgetRanges = [
-    "< $5,000",
-    "$5,000 - $15,000",
-    "$15,000 - $50,000",
-    "$50,000 - $100,000",
-    "$100,000+",
-    "Let's discuss"
   ];
 
   const timelines = [
@@ -337,9 +327,9 @@ export default function ContactSection() {
               border: '1px solid rgba(71, 85, 105, 0.5)',
               marginBottom: '1rem'
             }}>
-              {/* <span style={{ color: '#94a3b8', fontSize: '0.9rem', fontFamily: 'monospace' }}>
+              <span style={{ color: '#94a3b8', fontSize: '0.9rem', fontFamily: 'monospace' }}>
                 Get In Touch
-              </span> */}
+              </span>
             </div>
             
             <h2 style={{ 
@@ -375,8 +365,8 @@ export default function ContactSection() {
               margin: '0 auto',
               lineHeight: 1.6
             }}>
-              Ready to turn your ideas into reality? I'm always interested in new opportunities 
-              and collaborations. Let's discuss how we can work together to create something extraordinary.
+              Ready to turn your ideas into reality? I&apos;m always interested in new opportunities 
+              and collaborations. Let&apos;s discuss how we can work together to create something extraordinary.
             </p>
           </div>
 
@@ -854,7 +844,7 @@ export default function ContactSection() {
                   </button>
 
                   {/* Form Status */}
-                  {formStatus === 'success' && (
+                  {submitStatus === 'success' && (
                     <div style={{
                       padding: '1rem',
                       background: 'rgba(16, 185, 129, 0.2)',
@@ -1005,7 +995,7 @@ export default function ContactSection() {
                   lineHeight: 1.6,
                   marginBottom: '1.5rem'
                 }}>
-                  I'm actively taking on new projects and would love to hear about yours. 
+                  I&apos;m actively taking on new projects and would love to hear about yours. 
                   My current availability allows for immediate project starts.
                 </p>
 

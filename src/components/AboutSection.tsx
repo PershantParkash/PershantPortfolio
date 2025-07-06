@@ -3,13 +3,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 export default function AboutSection() {
-  const [mounted, setMounted] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    setMounted(true);
     
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 1024);
@@ -28,14 +26,15 @@ export default function AboutSection() {
       { threshold: 0.1 }
     );
     
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
     
     return () => {
       window.removeEventListener('resize', handleResize);
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -262,15 +261,14 @@ export default function AboutSection() {
                 </h3>
                 
                 <p style={{ 
-                  fontSize: '1rem',
+                  fontSize: '1.1rem',
                   color: '#cbd5e1',
-                  lineHeight: 1.7,
-                  marginBottom: '1rem'
+                  maxWidth: '700px',
+                  margin: '0 auto',
+                  lineHeight: 1.6
                 }}>
-                  I'm a passionate full-stack developer with over 1.5 years of experience building 
-                  scalable web applications and mobile applications. My journey started with a curiosity about how websites 
-                  work, which evolved into a deep love for creating digital solutions that make a 
-                  real impact.
+                  A progressive journey in software development, focusing on scalable solutions 
+                  and continuous improvement in both technical and leadership skills.
                 </p>
                 
                 <p style={{ 
