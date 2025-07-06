@@ -56,7 +56,13 @@ export default function ProjectsSection() {
       metrics: ["10K+ Users", "99.9% Uptime", "300% Sales ↗"],
       color: "#8b5cf6",
       bgGradient: "linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%)",
-      icon: "🛒"
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M3 3h18v18H3z"/>
+          <path d="M3 9h18"/>
+          <path d="M9 21V9"/>
+        </svg>
+      )
     },
     {
       title: "Task Management System",
@@ -71,7 +77,12 @@ export default function ProjectsSection() {
       metrics: ["50+ Teams", "40% Productivity ↗", "25% Faster Delivery"],
       color: "#06b6d4",
       bgGradient: "linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%)",
-      icon: "📋"
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M9 11H1l8-8 8 8h-8v12"/>
+          <path d="M16 21v-7a4 4 0 0 0-8 0v7"/>
+        </svg>
+      )
     },
     {
       title: "Mobile Banking App",
@@ -86,7 +97,14 @@ export default function ProjectsSection() {
       metrics: ["100K+ Users", "200% Adoption ↗", "5★ Rating"],
       color: "#10b981",
       bgGradient: "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
-      icon: "🏦"
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+          <path d="M12 7v4M8 9h8"/>
+        </svg>
+      )
     },
     {
       title: "Data Analytics Dashboard",
@@ -101,7 +119,14 @@ export default function ProjectsSection() {
       metrics: ["1M+ Data Points", "15% Revenue ↗", "Real-time"],
       color: "#f59e0b",
       bgGradient: "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)",
-      icon: "📊"
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M3 3v18h18"/>
+          <path d="M18 17V9"/>
+          <path d="M13 17V5"/>
+          <path d="M8 17v-3"/>
+        </svg>
+      )
     },
     {
       title: "API Gateway & Microservices",
@@ -116,7 +141,11 @@ export default function ProjectsSection() {
       metrics: ["1M+ Requests/day", "<100ms Response", "99.5% Uptime"],
       color: "#ef4444",
       bgGradient: "linear-gradient(135deg, #ef4444 0%, #f87171 100%)",
-      icon: "⚡"
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+        </svg>
+      )
     },
     {
       title: "Real-time Chat Application",
@@ -131,7 +160,13 @@ export default function ProjectsSection() {
       metrics: ["50K+ Concurrent", "70% Cost Reduction", "E2E Encrypted"],
       color: "#ec4899",
       bgGradient: "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)",
-      icon: "💬"
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          <path d="M8 9h8"/>
+          <path d="M8 13h6"/>
+        </svg>
+      )
     }
   ];
 
@@ -287,7 +322,7 @@ export default function ProjectsSection() {
               marginBottom: '1rem'
             }}>
               <span style={{ color: '#94a3b8', fontSize: '0.9rem', fontFamily: 'monospace' }}>
-                🚀 Featured Projects
+               Featured Projects
               </span>
             </div>
             
@@ -714,7 +749,7 @@ export default function ProjectsSection() {
           </div>
 
           {/* Call to Action */}
-          <div style={{
+          {/* <div style={{
             textAlign: 'center',
             animation: isVisible ? 'fadeInUp 1s ease 1.2s both' : 'none'
           }}>
@@ -843,7 +878,7 @@ export default function ProjectsSection() {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

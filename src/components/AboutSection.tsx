@@ -42,7 +42,7 @@ export default function AboutSection() {
 
   const skills = [
     { name: 'Frontend Development', level: 95, color: '#8b5cf6' },
-    { name: 'Backend Development', level: 90, color: '#06b6d4' },
+    { name: 'Backend Development', level: 90, color: '#ffffff' },
     { name: 'Database Design', level: 85, color: '#10b981' },
     { name: 'Cloud & DevOps', level: 80, color: '#f59e0b' },
     { name: 'UI/UX Design', level: 75, color: '#ef4444' },
@@ -51,26 +51,19 @@ export default function AboutSection() {
 
   const experiences = [
     {
-      title: 'Senior Full-Stack Developer',
-      company: 'TechCorp Solutions',
-      period: '2023 - Present',
-      description: 'Led development of enterprise-scale web applications serving 100K+ users. Implemented microservices architecture and improved system performance by 40%.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker']
-    },
-    {
       title: 'Full-Stack Developer',
-      company: 'Digital Innovations',
-      period: '2022 - 2023',
-      description: 'Developed and maintained multiple client projects, focusing on responsive design and optimal user experience. Collaborated with cross-functional teams.',
-      technologies: ['Next.js', 'TypeScript', 'MongoDB', 'GraphQL']
+      company: 'Zaptech',
+      period: 'Feb 2025 - Present',
+      description: 'Led development of enterprise-scale web applications serving 100K+ users. Implemented microservices architecture and improved system performance by 40%.',
+      technologies: ['Next.js', 'Nest.js', 'PostgreSQL', 'Docker']
     },
     {
-      title: 'Frontend Developer',
-      company: 'StartupHub',
-      period: '2021 - 2022',
-      description: 'Built dynamic user interfaces for SaaS platforms. Optimized application performance and implemented modern development practices.',
-      technologies: ['React', 'JavaScript', 'CSS3', 'REST APIs']
-    }
+      title: 'Automations Engineer',
+      company: 'MK Tech Solutions',
+      period: 'Feb 2024 - Jan 2025',
+      description: 'Developed and maintained multiple client projects, focusing on responsive design and optimal user experience. Collaborated with cross-functional teams to deliver solutions efficiently. Additionally, designed and implemented automation workflows using Make.com, integrating APIs and streamlining business processes for various clients.',
+      technologies: ['Make.com', 'Airtable', 'Zoho CRM']
+    },
   ];
 
   return (
@@ -274,8 +267,8 @@ export default function AboutSection() {
                   lineHeight: 1.7,
                   marginBottom: '1rem'
                 }}>
-                  I'm a passionate full-stack developer with over 3 years of experience building 
-                  scalable web applications. My journey started with a curiosity about how websites 
+                  I'm a passionate full-stack developer with over 1.5 years of experience building 
+                  scalable web applications and mobile applications. My journey started with a curiosity about how websites 
                   work, which evolved into a deep love for creating digital solutions that make a 
                   real impact.
                 </p>
@@ -286,8 +279,7 @@ export default function AboutSection() {
                   lineHeight: 1.7
                 }}>
                   I believe in writing clean, maintainable code and staying current with the latest 
-                  technologies. When I'm not coding, you'll find me exploring new frameworks, 
-                  contributing to open-source projects, or mentoring aspiring developers.
+                  technologies.
                 </p>
               </div>
 
@@ -299,10 +291,10 @@ export default function AboutSection() {
                 animation: isVisible ? 'slideInLeft 1s ease 0.6s both' : 'none'
               }}>
                 {[
-                  { number: '20+', label: 'Projects Completed' },
-                  { number: '3+', label: 'Years Experience' },
-                  { number: '15+', label: 'Technologies' },
-                  { number: '100%', label: 'Client Satisfaction' }
+                  { number: '3+', label: 'Projects Completed' },
+                  { number: '1.5+', label: 'Years Experience' },
+                  // { number: '15+', label: 'Technologies' },
+                  // { number: '100%', label: 'Client Satisfaction' }
                 ].map((stat, index) => (
                   <div 
                     key={index}
@@ -382,7 +374,7 @@ export default function AboutSection() {
                   {skills.map((skill, index) => (
                     <div key={index} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <span style={{ color: '#cbd5e1', fontSize: '0.9rem', fontWeight: 500 }}>
+                        <span style={{ color: '#ffffff', fontSize: '0.9rem', fontWeight: 500 }}>
                           {skill.name}
                         </span>
                         <span style={{ color: '#94a3b8', fontSize: '0.8rem' }}>
@@ -435,7 +427,7 @@ export default function AboutSection() {
                   color: '#ffffff',
                   marginBottom: '1.5rem'
                 }}>
-                  Experience
+                Job Experience
                 </h3>
                 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>

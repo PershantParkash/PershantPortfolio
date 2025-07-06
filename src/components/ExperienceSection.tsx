@@ -97,7 +97,11 @@ export default function ExperienceSection() {
       metrics: ["25% Conversion ↗", "30% Bundle Size ↓", "5 Projects Impact"],
       color: "#10b981",
       bgGradient: "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
-      icon: "🎨",
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      ),
       isActive: false
     }
   ];
@@ -253,7 +257,7 @@ export default function ExperienceSection() {
               marginBottom: '1rem'
             }}>
               <span style={{ color: '#94a3b8', fontSize: '0.9rem', fontFamily: 'monospace' }}>
-                💼 Professional Journey
+                Professional Journey
               </span>
             </div>
             

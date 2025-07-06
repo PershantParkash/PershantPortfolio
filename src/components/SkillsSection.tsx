@@ -53,12 +53,12 @@ export default function SkillsSection() {
       color: "#8b5cf6",
       bgGradient: "linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%)",
       skills: [
-        { name: "React", level: 95, color: "#61dafb" },
+        { name: "React", level: 95, color: "#ffffff" },
         { name: "Next.js", level: 90, color: "#ffffff" },
-        { name: "TypeScript", level: 88, color: "#3178c6" },
-        { name: "Tailwind CSS", level: 92, color: "#06b6d4" },
-        { name: "React Native", level: 85, color: "#61dafb" },
-        { name: "Vue.js", level: 80, color: "#4fc08d" }
+        { name: "TypeScript", level: 88, color: "#ffffff" },
+        { name: "Tailwind CSS", level: 92, color: "#ffffff" },
+        { name: "React Native", level: 85, color: "#ffffff" },
+        { name: "Vue.js", level: 80, color: "#ffffff" }
       ]
     },
     {
@@ -74,12 +74,12 @@ export default function SkillsSection() {
       color: "#06b6d4",
       bgGradient: "linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%)",
       skills: [
-        { name: "Node.js", level: 92, color: "#339933" },
+        { name: "Node.js", level: 92, color: "#ffffff" },
         { name: "Express.js", level: 90, color: "#ffffff" },
-        { name: "PostgreSQL", level: 85, color: "#336791" },
-        { name: "MongoDB", level: 82, color: "#47a248" },
-        { name: "GraphQL", level: 78, color: "#e10098" },
-        { name: "Python", level: 75, color: "#3776ab" }
+        { name: "PostgreSQL", level: 85, color: "#ffffff" },
+        { name: "MongoDB", level: 82, color: "#ffffff" },
+        { name: "GraphQL", level: 78, color: "#ffffff" },
+        { name: "Python", level: 75, color: "#ffffff" }
       ]
     },
     {
@@ -94,12 +94,12 @@ export default function SkillsSection() {
       color: "#10b981",
       bgGradient: "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
       skills: [
-        { name: "Docker", level: 85, color: "#2496ed" },
-        { name: "Git", level: 95, color: "#f05032" },
-        { name: "AWS", level: 80, color: "#ff9900" },
-        { name: "CI/CD", level: 82, color: "#4285f4" },
-        { name: "Linux", level: 88, color: "#fcc624" },
-        { name: "Nginx", level: 75, color: "#009639" }
+        { name: "Docker", level: 85, color: "#ffffff" },
+        { name: "Git", level: 95, color: "#ffffff" },
+        { name: "AWS", level: 80, color: "#ffffff" },
+        { name: "CI/CD", level: 82, color: "#ffffff" },
+        { name: "Linux", level: 88, color: "#ffffff" },
+        { name: "Nginx", level: 75, color: "#ffffff" }
       ]
     }
   ];

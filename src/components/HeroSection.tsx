@@ -202,7 +202,7 @@ export default function HeroSection() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               
               {/* Status badge */}
-              <div style={{
+              {/* <div style={{
                 transition: 'all 1s ease',
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? 'translateY(0)' : 'translateY(2rem)'
@@ -228,7 +228,7 @@ export default function HeroSection() {
                     Available for new projects
                   </span>
                 </div>
-              </div>
+              </div> */}
 
               {/* Main heading */}
               <div style={{
@@ -250,7 +250,7 @@ export default function HeroSection() {
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text'
                   }}>
-                    Pershant
+                    Pershant Parkash
                   </span>
                 </h1>
                 <div style={{
@@ -308,12 +308,12 @@ export default function HeroSection() {
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                     <div style={{ width: '0.4rem', height: '0.4rem', background: '#4ade80', borderRadius: '50%' }}></div>
-                    <span style={{ color: '#cbd5e1', fontSize: '0.8rem' }}>3+ Years Experience</span>
+                    <span style={{ color: '#cbd5e1', fontSize: '0.8rem' }}>1.5+ Years Experience</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                  {/* <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                     <div style={{ width: '0.4rem', height: '0.4rem', background: '#60a5fa', borderRadius: '50%' }}></div>
                     <span style={{ color: '#cbd5e1', fontSize: '0.8rem' }}>20+ Projects Delivered</span>
-                  </div>
+                  </div> */}
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                     <div style={{ width: '0.4rem', height: '0.4rem', background: '#a78bfa', borderRadius: '50%' }}></div>
                     <span style={{ color: '#cbd5e1', fontSize: '0.8rem' }}>Full-Stack Expertise</span>

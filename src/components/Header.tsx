@@ -163,7 +163,7 @@ export default function Header() {
                 target.style.color = '#ffffff';
               }}
               >
-                Pershant
+                Pershant Parkash
               </h1>
             </button>
 

@@ -96,10 +96,31 @@ export default function TestimonialsSection() {
   ];
 
   const stats = [
-    { value: "4.9/5", label: "Average Rating", icon: "⭐" },
-    { value: "100%", label: "Client Satisfaction", icon: "😊" },
-    { value: "15+", label: "Recommendations", icon: "👍" },
-    { value: "50+", label: "Happy Clients", icon: "🤝" }
+    { value: "4.9/5", label: "Average Rating", icon: (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      ) },
+    { value: "100%", label: "Client Satisfaction", icon: (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22,4 12,14.01 9,11.01"/>
+        </svg>
+      ) },
+    { value: "15+", label: "Recommendations", icon: (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M14 9V5a3 3 0 0 0-6 0v4"/>
+          <rect x="2" y="9" width="20" height="12" rx="2" ry="2"/>
+        </svg>
+      ) },
+    { value: "50+", label: "Happy Clients", icon: (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      ) }
   ];
 
   return (
@@ -252,7 +273,7 @@ export default function TestimonialsSection() {
               marginBottom: '1rem'
             }}>
               <span style={{ color: '#94a3b8', fontSize: '0.9rem', fontFamily: 'monospace' }}>
-                💬 Client Testimonials
+                Client Testimonials
               </span>
             </div>
             
